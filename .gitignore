@@ -1,0 +1,19 @@
+.DS_Store
+.env
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.egg-info/
+dist/
+build/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.tox/
+
+# Virtualenvs
+.venv/
+venv/
+

@@ -1,0 +1,30 @@
+[build-system]
+requires = ["setuptools>=68.0.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "mcp-secure-python-starter"
+version = "0.1.0"
+description = "Secure-by-default Python MCP server starter (CORS allowlist, request size limits, optional bearer auth)."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "Theodor N. Engøy" }]
+dependencies = [
+  # MCP Python SDK (v1.x is the stable series; v2.x is pre-alpha as of Feb 2026).
+  "mcp>=1.26.0,<2",
+]
+
+[project.urls]
+Homepage = "https://github.com/TheodorNEngoy/mcp-secure-python-starter"
+Issues = "https://github.com/TheodorNEngoy/mcp-secure-python-starter/issues"
+
+[project.scripts]
+mcp-secure-python-starter = "mcp_secure_python_starter.__main__:main"
+
+[tool.setuptools]
+package-dir = { "" = "src" }
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
